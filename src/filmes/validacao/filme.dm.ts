@@ -10,9 +10,10 @@ export class FilmesArmazenados{
     }
 
     // **Pedir ajuda**
-    // Compartilhar() {
-    //     const mensagemCompartilhamento = "Estou assistindo o filme" +this.#filmes+ "que conta a seguinte história: "+this.#filmes+ ", foi lançado em "+this.#filmes+" e tem duração de "+this.#filmes+" minutos. Assista também!!"
-    // }
+    Compartilhar(id: string): string {
+        const filme = this.buscaPorID(id);
+        return filme.compartilhar();
+    }
     
     atualizaFime(id: string, dadosAtualizacao: Partial<FilmeEntity>){
         const filme = this.buscaPorID(id);

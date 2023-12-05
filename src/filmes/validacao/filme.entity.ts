@@ -36,4 +36,10 @@ export class FilmeEntity{
         return retorno;
     }
 
+    compartilhar():any{
+        return{
+            mensagem: `Estou assistindo o filme ${this.nome} que conta a seguinte história: ${this.sinopse} , foi lançado em ${this.ano} e tem duração de ${this.duracao} minutos. Assista também!`
+        };
+    }
+
 }

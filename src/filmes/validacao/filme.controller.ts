@@ -28,10 +28,11 @@ export class FilmeController{
 
 
     // **Pedir ajuda**
-    // @Get()
-    //     async Compartilhar() {
-    //         const filmesListados = await this.clsFilmesArmazenados.Filmes;
-    //     }
+    @Get(':id/compartilhar')
+    Compartilhar(@Param('id') id: string):string {
+        return this.clsFilmesArmazenados.Compartilhar(id);
+    }
+
 
     @Delete('/:id')
     async ExcluiFilme(@Param('id') id: string){
